@@ -49,17 +49,20 @@ class _OrderItemTileState extends State<OrderItemTile> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Text(
-                                    prod.title,
-                                    style: const TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w400),
+                                  SizedBox(
+                                    width: 250,
+                                    child: Text(
+                                      prod.title,
+                                      style:
+                                          Theme.of(context).textTheme.bodyMedium,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                    ),
                                   ),
                                   Text(
                                     '${prod.quantity} x ${prod.price} Rs',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.grey.shade600),
+                                    style:
+                                        Theme.of(context).textTheme.bodyMedium,
                                   )
                                 ],
                               ),
